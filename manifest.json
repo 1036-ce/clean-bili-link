@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "clean bilibili link",
+  "version": "1.0",
+  "permissions": [
+    "declarativeNetRequest",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.bilibili.com/video/BV*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "host_permissions": [
+    "https://*.bilibili.com/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "rule_1",
+        "enabled": true,
+        "path": "rule_1.json"
+      },
+      {
+        "id": "rule_2",
+        "enabled": true,
+        "path": "rule_2.json"
+      }
+  ]
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

@@ -1,0 +1,20 @@
+[
+	{
+		"id": 2,
+		"priority": 1,
+		"action": {
+			"type": "redirect",
+			"redirect": {
+				"transform": {
+					"queryTransform": {
+						"removeParams": ["spm_id_from", "vd_source"]
+					}
+				}
+			}
+		},
+		"condition": {
+			"urlFilter": "https://space.bilibili.com/*",
+			"resourceTypes": ["main_frame"]
+		}
+	}
+]
