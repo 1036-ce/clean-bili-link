@@ -20,7 +20,7 @@ function removeQueryParameters() {
 
 chrome.runtime.onMessage.addListener(
 	function(request, sender, sendResponse) {
-		if (request.message === 'url_changed') {
+		if (request.message === 'vd_source_add') {
 			console.log('here')
 			removeQueryParameters()
 		}

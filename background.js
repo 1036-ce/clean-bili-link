@@ -8,7 +8,7 @@ chrome.tabs.onUpdated.addListener(
 		console.log(changeInfo.url)
 		if (changeInfo.url !== undefined && changeInfo.url.includes('vd_source')) {
 			chrome.tabs.sendMessage(tabId, {
-				message: 'url_changed',
+				message: 'vd_source_add',
 			})
 		}
 	}

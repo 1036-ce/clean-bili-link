@@ -27,6 +27,11 @@
         "id": "rule_2",
         "enabled": true,
         "path": "rule_2.json"
+      },
+      {
+        "id": "rule_3",
+        "enabled": true,
+        "path": "rule_3.json"
       }
   ]
   },
